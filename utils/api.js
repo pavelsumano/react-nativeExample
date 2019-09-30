@@ -6,8 +6,7 @@ class Api {
       `${BASE_API}movie_suggestions.json?movie_id=${id}`,
     );
     const { data } = await query.json();
-    console.log(data);
-    return data;
+    return data.movies;
   }
 }
 

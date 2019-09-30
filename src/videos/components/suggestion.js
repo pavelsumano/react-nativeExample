@@ -7,16 +7,18 @@ function Suggestion(props) {
       <View style={styles.left}>
         <Image
           style={styles.cover}
-          source={require('../../../assets/logo.png')}
+          source={{
+            uri: props.medium_cover_image,
+          }}
         />
         <View style={styles.genre}>
-          <Text style={styles.genreText}> genero</Text>
+          <Text style={styles.genreText}>{props.genres[0]}</Text>
         </View>
       </View>
       <View style={styles.rigth}>
-        <Text style={styles.title}> MovieTitle</Text>
-        <Text style={styles.year}>movieYear</Text>
-        <Text style={styles.rating}>movieRating</Text>
+        <Text style={styles.title}> {props.title} </Text>
+        <Text style={styles.year}>props.year</Text>
+        <Text style={styles.rating}>props.rating</Text>
       </View>
     </View>
   );

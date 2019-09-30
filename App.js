@@ -8,8 +8,18 @@ import API from './utils/api';
 
 type Props = {};
 export default class App extends Component<Props> {
-  componentDidMount() {
-    API.getSuggestion(10);
+  state = {
+    suggestionList: [],
+    loading: true,
+  };
+
+  async componentDidMount() {
+    const movies = await API.getSuggestion(2);
+    console.log(movies);
+    this.setState({
+      suggestionList: movies,
+      loading: false,
+    });
   }
   render() {
     return (
@@ -19,7 +29,11 @@ export default class App extends Component<Props> {
         </Header>
         <Text>buscador</Text>
         <Text>categorias</Text>
-        <SuggestionList />
+        {this.state.loading ? (
+          <Text> Cargando</Text>
+        ) : (
+          <SuggestionList list={this.state.suggestionList} />
+        )}
       </Home>
     );
   }
