@@ -11,5 +11,7 @@ List
 Empty list & Separator
 suggestion component
 fetch feature
+Dayta from API
+Loading
 
 Recommend Feature
