@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
 import Video from 'react-native-video';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, ActivityIndicator } from 'react-native';
 import Layout from '../components/layout';
 
 class Player extends Component {
+  state = {
+    loading: true,
+  };
+  onBuffer = ({ isBuffering }) => {
+    this.setState({ loading: isBuffering });
+  };
+  onLoad = () => {
+    this.setState({ loading: false });
+  };
   render() {
     return (
       <Layout
@@ -17,8 +26,10 @@ class Player extends Component {
             onError={this.videoError}
             style={styles.video}
             resizeMode="contain"
+            onLoad={this.onLoad} // when remote video is load
           />
         }
+        loader={<ActivityIndicator color="red" />}
       />
     );
   }
