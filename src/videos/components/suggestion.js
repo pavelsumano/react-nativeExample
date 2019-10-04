@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
 function Suggestion(props) {
+  console.log('props', props);
   return (
     <View style={styles.container}>
       <View style={styles.left}>
@@ -12,7 +13,9 @@ function Suggestion(props) {
           }}
         />
         <View style={styles.genre}>
-          <Text style={styles.genreText}>{props.genres[1]}</Text>
+          <Text style={styles.genreText}>
+            {props.genres ? props.genres[0] : 's/g'}
+          </Text>
         </View>
       </View>
       <View style={styles.rigth}>
