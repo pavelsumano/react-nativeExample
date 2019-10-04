@@ -8,7 +8,7 @@ function HorizontalSeparator(props) {
 const styles = StyleSheet.create({
   separator: {
     flex: 1,
-    marginHorizontal,
+    marginHorizontal: 5,
   },
 });
 
