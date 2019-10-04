@@ -11,7 +11,10 @@ List
 Empty list & Separator
 suggestion component
 fetch feature
-Dayta from API
+Data from API
 Loading
+quitamos loading
+fix API
+add category component
 
 Recommend Feature
