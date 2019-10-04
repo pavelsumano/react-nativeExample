@@ -11,7 +11,7 @@ class SuggestionList extends Component {
   renderEmpty = () => <Empty text="No hay sugerencias :( " />;
   ItemSeparator = () => <Separador />;
   renderItem = ({ item }) => {
-    console.log(item);
+    // console.log(item);
     return <Suggestion {...item} />;
   };
 

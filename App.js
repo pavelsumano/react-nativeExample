@@ -7,8 +7,7 @@ import SuggestionList from './src/videos/containers/suggestionList';
 import CategoryList from './src/videos/containers/categoryList';
 import Loading from './src/sections/components/loading';
 import API from './utils/api';
-
-import Video from 'react-native-video';
+import Player from './src/player/containers/player';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -21,8 +20,8 @@ export default class App extends Component<Props> {
   async componentDidMount() {
     const movies = await API.getSuggestion(10);
     const categories = await API.getMovies();
-    console.log(movies);
-    console.log(categories);
+    // console.log(movies);
+    // console.log(categories);
     this.setState({
       suggestionList: movies,
       categoryList: categories,
@@ -33,31 +32,7 @@ export default class App extends Component<Props> {
     return (
       <Home>
         <Header />
-        <View
-          style={{
-            flex: 1,
-            height: 100,
-          }}>
-          <Video
-            source={{
-              uri:
-                'https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4',
-            }}
-            ref={ref => {
-              this.player = ref;
-            }} // Store reference
-            onBuffer={this.onBuffer} // Callback when remote video is buffering
-            onError={this.videoError}
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              bottom: 0,
-              right: 0,
-            }}
-            resizeMode="contain"
-          />
-        </View>
+        <Player />
         <Text>buscador</Text>
         <Text>categorias</Text>
         {/* {this.state.loading ? (
