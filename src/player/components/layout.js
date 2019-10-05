@@ -14,6 +14,9 @@ function Layout(props) {
 const styles = StyleSheet.create({
   container: {
     paddingTop: '56.25%',
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'relative',
   },
   video: {
     position: 'absolute',

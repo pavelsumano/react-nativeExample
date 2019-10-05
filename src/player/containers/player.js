@@ -32,6 +32,7 @@ class Player extends Component {
   render() {
     return (
       <Layout
+        loading={this.state.loading}
         video={
           <Video
             source={require('../../../assets/StopMotion2.mp4')}
@@ -50,8 +51,8 @@ class Player extends Component {
         controls={
           <ControlLayout>
             <PlayPause onPress={this.playPause} paused={this.state.paused} />
-            <Text>ProgressBar | </Text>
-            <Text>timeLeft | </Text>
+            <Text>Progress Bar | </Text>
+            <Text>time Left | </Text>
             <Text>fullScreen | </Text>
           </ControlLayout>
         }
