@@ -8,6 +8,8 @@ import CategoryList from './src/videos/containers/categoryList';
 // import Loading from './src/sections/components/loading';
 import API from './utils/api';
 import Player from './src/player/containers/player';
+import { Provider } from 'react-redux';
+import store from './utils/store';
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -30,18 +32,20 @@ export default class App extends Component<Props> {
   }
   render() {
     return (
-      <Home>
-        <Header />
-        <Player />
-        <Text>buscador</Text>
-        <Text>categorias</Text>
-        {/* {this.state.loading ? (
+      <Provider store={store}>
+        <Home>
+          <Header />
+          <Player />
+          <Text>buscador</Text>
+          <Text>categorias</Text>
+          {/* {this.state.loading ? (
           <Loading />
         ) : ( */}
-        <CategoryList list={this.state.categoryList} />
-        <SuggestionList list={this.state.suggestionList} />
-        {/* )} */}
-      </Home>
+          <CategoryList list={this.state.categoryList} />
+          <SuggestionList list={this.state.suggestionList} />
+          {/* )} */}
+        </Home>
+      </Provider>
     );
   }
 }
