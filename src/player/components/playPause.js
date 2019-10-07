@@ -13,7 +13,7 @@ function PlayPause(props) {
     <TouchableHighlight
       onPress={props.onPress}
       style={styles.container}
-      underlayColor="blue"
+      underlayColor="#266a2e"
       hitSlop={{
         left: 5,
         top: 5,
@@ -31,7 +31,7 @@ function PlayPause(props) {
 
 const styles = StyleSheet.create({
   button: {
-    color: 'white',
+    color: '#266a2e',
     fontSize: 10,
     fontWeight: 'bold',
   },
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: 'white',
-    backgroundColor: 'gray',
+    borderColor: '#266a2e',
+    backgroundColor: 'rgba(192, 192, 192 ,0.3)',
   },
 });
 export default PlayPause;

@@ -5,7 +5,7 @@ import Home from './src/screens/containers/home';
 import Header from './src/sections/components/header';
 import SuggestionList from './src/videos/containers/suggestionList';
 import CategoryList from './src/videos/containers/categoryList';
-import Loading from './src/sections/components/loading';
+// import Loading from './src/sections/components/loading';
 import API from './utils/api';
 import Player from './src/player/containers/player';
 
