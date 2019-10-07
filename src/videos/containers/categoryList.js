@@ -7,7 +7,7 @@ import Layout from '../components/categoryListLayout';
 import { connect } from 'react-redux';
 
 function mapStateToProps(state) {
-  debugger;
+  return { list: state.categoryList };
 }
 
 class CategoryList extends Component {
