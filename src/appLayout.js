@@ -35,7 +35,6 @@ class AppLayout extends Component {
     return (
       <Home>
         <Header />
-
         <Text>buscador</Text>
         <CategoryList />
         <SuggestionList />
