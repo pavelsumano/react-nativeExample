@@ -8,6 +8,7 @@ import Header from './sections/components/header';
 import SuggestionList from './videos/containers/suggestionList';
 import CategoryList from './videos/containers/categoryList';
 import Movie from './screens/containers/movie';
+import Search from './sections/containers/buscador';
 
 class AppLayout extends Component {
   async componentDidMount() {
@@ -35,7 +36,7 @@ class AppLayout extends Component {
     return (
       <Home>
         <Header />
-        <Text>buscador</Text>
+        <Search />
         <CategoryList />
         <SuggestionList />
       </Home>
