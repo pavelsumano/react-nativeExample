@@ -10,8 +10,14 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.6.2",
     "react": "16.9.0",
-    "react-native": "0.61.1"
+    "react-native": "0.61.1",
+    "react-native-video": "^5.0.2",
+    "react-native-webview": "^7.4.1",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

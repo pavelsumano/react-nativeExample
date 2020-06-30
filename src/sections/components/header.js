@@ -27,11 +27,11 @@ const styles = StyleSheet.create({
   container: {
     paddingVertical: 10,
     paddingHorizontal: 10,
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
     flexDirection: 'row',
   },
   right: {
-    backgroundColor: 'green',
+    // backgroundColor: 'green',
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'flex-end',
